@@ -1,0 +1,43 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Funcionario;
+
+public class Program {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		Funcionario fun = new Funcionario();
+		
+		System.out.print("Name: ");
+		fun.Name = sc.nextLine();
+		System.out.print("Gross salary: ");
+		fun.GrossSalary = sc.nextDouble();
+		System.out.print("Tax: ");
+		fun.Tax = sc.nextDouble();
+		System.out.println();
+		System.out.println("Funcionario: " + fun);
+		System.out.println();
+		System.out.print("Which percentage to increase salary? ");
+		double percentage = sc.nextDouble();
+		fun.increaseSalary(percentage);
+		System.out.println();
+		System.out.println("Updated data: " + fun);
+
+		
+		
+		
+		
+		
+		
+		
+		sc.close();
+	}
+
+}
